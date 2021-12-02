@@ -7,7 +7,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div style={{ borderBottom: "1px solid rgba(42, 42, 42, 0.2)", visibility: "visible" }} 
+        <div style={{ borderBottom: "1px solid rgba(42, 42, 42, 0.2)", visibility: "visible" }}
             className="header-area"
         >
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
@@ -19,7 +19,7 @@ const Navbar = () => {
                         className="inline-flex items-center logo"
                     >
                         <img
-                            src={ logo }
+                            src={logo}
                             style={{ height: 72 }}
                             className="asd"
                             alt=""

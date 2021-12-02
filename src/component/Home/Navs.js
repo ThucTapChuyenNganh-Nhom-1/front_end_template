@@ -3,66 +3,87 @@ import { useState } from 'react';
 
 import logo from '../../images/logo_nhom1.png'
 
+// const tabs = ["TRANG CHỦ", "GIỚI THIỆU", "DỰ ÁN", "LIÊN HỆ"]
+
 const Navbar = () => {
+    // const [type, setType] = useState("TRANG CHỦ")
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const [showClass, setShowClass] = useState(true)
+
+    // useEffect(() => {
+
+    //     const handleResize = () => {
+    //         setShowClass(window.innerWidth <= 770)
+    //     }
+    //     window.addEventListener("resize", handleResize)
+
+    //     // Clean up 
+    //     return () => {
+    //         window.removeEventListener("resize", handleResize)
+    //     }
+    // }, [])
 
     return (
-        <div style={{ borderBottom: "1px solid rgba(42, 42, 42, 0.2)", visibility: "visible" }}
-            className="header-area"
+        <div style={{ 
+            borderBottom: "1px solid rgba(42, 42, 42, 0.2)", 
+            visibility: "visible",  
+            
+        }}
+            className="header-area header-sticky slideInDown "
         >
-            <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-                <div className="relative flex items-center justify-between">
+            <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+                <div className="main-nav flex items-center justify-between">
                     <a
                         href="/"
                         aria-label="Company"
                         title="Company"
-                        className="inline-flex items-center logo"
+                        className="inline-flex items-center logo p-2"
                     >
                         <img
                             src={logo}
-                            style={{ height: 72 }}
-                            className="asd"
+                            style={{  }}
+                            className="img"
                             alt=""
                         />
 
                     </a>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
-                        <li>
+                        <li className="scroll-to-section">
                             <a
                                 href="/"
                                 aria-label="Our product"
                                 title="Our product"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
                             >
                                 TRANG CHỦ
                             </a>
                         </li>
-                        <li>
+                        <li className="scroll-to-section">
                             <a
                                 href="/"
                                 aria-label="Our product"
                                 title="Our product"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
                             >
                                 GIỚI THIỆU
                             </a>
                         </li>
-                        <li>
+                        <li className="scroll-to-section">
                             <a
                                 href="/"
                                 aria-label="Product pricing"
                                 title="Product pricing"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
                             >
                                 DỰ ÁN
                             </a>
                         </li>
-                        <li>
+                        <li className="scroll-to-section">
                             <a
                                 href="/"
                                 aria-label="About us"
                                 title="About us"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
                             >
                                 LIÊN HỆ
                             </a>
@@ -92,7 +113,7 @@ const Navbar = () => {
                             </svg>
                         </button>
                         {isMenuOpen && (
-                            <div className="absolute top-0 left-0 w-full" style={{ zIndex: 1 }}>
+                            <div className="absolute top-3 left-0 w-full "  style={{ zIndex: 1 }}>
                                 <div className="p-5 bg-white border rounded shadow-sm">
                                     <div className="flex items-center justify-between mb-4">
                                         <div></div>
@@ -100,7 +121,7 @@ const Navbar = () => {
                                             <button
                                                 aria-label="Close Menu"
                                                 title="Close Menu"
-                                                className="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                                className="p-2 -mt-2 mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                                                 onClick={() => setIsMenuOpen(false)}
                                             >
                                                 <svg className="w-5 text-gray-600" viewBox="0 0 24 24">
@@ -121,7 +142,7 @@ const Navbar = () => {
                                                     title="Our product"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    Product
+                                                    TRANG CHỦ
                                                 </a>
                                             </li>
                                             <li>
@@ -131,7 +152,7 @@ const Navbar = () => {
                                                     title="Our product"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    Features
+                                                    GIỚI THIỆU
                                                 </a>
                                             </li>
                                             <li>
@@ -141,7 +162,7 @@ const Navbar = () => {
                                                     title="Product pricing"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    Pricing
+                                                    DỰ ÁN
                                                 </a>
                                             </li>
                                             <li>
@@ -151,7 +172,7 @@ const Navbar = () => {
                                                     title="About us"
                                                     className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                                                 >
-                                                    About us
+                                                    LIÊN HỆ
                                                 </a>
                                             </li>
 

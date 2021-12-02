@@ -77,8 +77,8 @@
 }
 
 .bounce {
-    -webkit-animation-name: bounce;
-    animation-name: bounce;
+    /* -webkit-animation-name: bounce; */
+    animation: bounce 2s;
     -webkit-transform-origin: center bottom;
     -ms-transform-origin: center bottom;
     transform-origin: center bottom;
@@ -147,8 +147,8 @@
 }
 
 .pulse {
-    -webkit-animation-name: pulse;
-    animation-name: pulse;
+    /* -webkit-animation-name: pulse; */
+    animation: pulse 1s;
 }
 
 @-webkit-keyframes rubberBand {
@@ -214,8 +214,8 @@
 }
 
 .rubberBand {
-    -webkit-animation-name: rubberBand;
-    animation-name: rubberBand;
+    /* -webkit-animation-name: rubberBand; */
+    animation: rubberBand 1s;
 }
 
 @-webkit-keyframes shake {
@@ -265,8 +265,8 @@
 }
 
 .shake {
-    -webkit-animation-name: shake;
-    animation-name: shake;
+    /* -webkit-animation-name: shake; */
+    animation: shake 1s;
 }
 
 @-webkit-keyframes swing {
@@ -316,11 +316,11 @@
 }
 
 .swing {
-    -webkit-transform-origin: top center;
-    -ms-transform-origin: top center;
-    transform-origin: top center;
-    -webkit-animation-name: swing;
-    animation-name: swing;
+    /* -webkit-transform-origin: top center; */
+    /* -ms-transform-origin: top center; */
+    transform-origin: right center;
+    /* -webkit-animation-name: swing; */
+    animation: swing 1s;
 }
 
 @-webkit-keyframes tada {
@@ -382,8 +382,8 @@
 }
 
 .tada {
-    -webkit-animation-name: tada;
-    animation-name: tada;
+    /* -webkit-animation-name: tada; */
+    animation: tada 1s;
 }
 
 
@@ -452,8 +452,8 @@
 }
 
 .wobble {
-    -webkit-animation-name: wobble;
-    animation-name: wobble;
+    /* -webkit-animation-name: wobble; */
+    animation: wobble 1s;
 }
 
 @-webkit-keyframes bounceIn {
@@ -1064,6 +1064,7 @@
 .fadeInDown {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
+    animation: fadeInDown 2s;
 }
 
 @-webkit-keyframes fadeInDownBig {
@@ -2785,7 +2786,7 @@
 @keyframes slideInDown {
     0% {
         -webkit-transform: translateY(-100%);
-        transform: translateY(-100%);
+        transform: translateY(-120%);
         visibility: visible;
     }
     100% {
@@ -2795,8 +2796,8 @@
 }
 
 .slideInDown {
-    -webkit-animation-name: slideInDown;
-    animation-name: slideInDown;
+    /* -webkit-animation-name: slideInDown; */
+    animation: slideInDown 2s;
 }
 
 @-webkit-keyframes slideInLeft {
@@ -2824,8 +2825,8 @@
 }
 
 .slideInLeft {
-    -webkit-animation-name: slideInLeft;
-    animation-name: slideInLeft;
+    /* -webkit-animation-name: slideInLeft; */
+    animation: slideInLeft 1.5s;
 }
 
 @-webkit-keyframes slideInRight {
@@ -2853,8 +2854,8 @@
 }
 
 .slideInRight {
-    -webkit-animation-name: slideInRight;
-    animation-name: slideInRight;
+    /* -webkit-animation-name: slideInRight; */
+    animation: slideInRight 1.5s;
 }
 
 @-webkit-keyframes slideInUp {
@@ -3001,3 +3002,6 @@
     -webkit-animation-name: slideOutUp;
     animation-name: slideOutUp;
 }
+
+/* New */
+

@@ -373,7 +373,7 @@ header
     position: absolute;
     left: 0px;
     right: 0px;
-    z-index: 100;
+    z-index: 1;
     height: 100px;
     -webkit-transition: all .5s ease 0s;
     -moz-transition: all .5s ease 0s;
@@ -381,10 +381,10 @@ header
     transition: all .5s ease 0s;
 }
 
-.header-area .main-nav {
+/* .header-area .main-nav {
     min-height: 80px;
     background: transparent;
-}
+} */
 
 .header-area .main-nav .logo {
     float: left;
@@ -395,7 +395,7 @@ header
 }
 
 .header-area .main-nav .logo {
-    margin-top: 18px;
+    margin-top: 4px;
     line-height: 100px;
     float: left;
     -webkit-transition: all 0.3s ease 0s;
@@ -745,7 +745,11 @@ header
         padding: 0px;
     }
     .header-area .logo {
-        margin-left: 30px;
+        /* margin-left: 30px; */
+        /* height: 45px; */
+    }
+    .header-area .main-nav .logo {
+        margin-top: 18px;
     }
     .header-area .menu-trigger {
         display: block !important;
@@ -959,6 +963,30 @@ Banner Style
     width: 100%;
     height: 100%;
     z-index: 1;
+}
+
+.bg_content {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 250px 120px 150px 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg_content:after {
+    content: '';
+    background-image: url(/src/images/slider-left-dec.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    animation: fadeIn 1.5s;
+    animation-delay: 0s;
 }
 
 .main-banner .left-content {
@@ -1617,7 +1645,7 @@ Footer Style
 */
 
 footer {
-    /* background-image: url(../images/footer-bg.png); */
+    background-image: url(/src/images/footer-bg.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2023,7 +2051,7 @@ responsive
     .header-area {
         background-color: #fff;
     }
-    .main-banner:after {
+    .bg_content:after {
         display: none;
     }
     .main-banner .left-content h2 {
@@ -2047,11 +2075,12 @@ responsive
     .main-banner .left-content {
         margin-right: 0px;
     }
-    .main-banner {
+    .bg_content {
         text-align: center;
-        padding: 226px 0px 30px 0px;
+        padding: 170px 0px 30px 0px;
+        z-index: 0;
     }
-    .main-banner:before {
+    .bg_content:before {
         display: none;
     }
     .main-banner .right-image {
@@ -2127,6 +2156,10 @@ responsive
     }
 }
 
+.img{
+    height: 72px;
+}
+
 @media (max-width: 767px) {
     .the-clients .naccs .menu div {
         text-align: center;
@@ -2173,6 +2206,10 @@ responsive
     .header-area .main-nav .logo h4 img {
         max-width: 30px;
         margin-left: 5px;
+        
+    }
+    .img{
+        height: 45px;
     }
     .main-banner .info-stat {
         margin-bottom: 15px;
@@ -2263,6 +2300,15 @@ responsive
     form#contact {
         padding: 30px;
     }
+
+    .tieude{
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    
+    .ls_icon{
+        justify-content: center;
+    }
 }
 
 .avt {
@@ -2273,26 +2319,10 @@ nav > ul > li {
     text-align: center;
 }
 
-
-
-.bg_content {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    padding: 250px 120px 150px 120px;
-    position: relative;
-    overflow: hidden;
+.scroll-to-section{
+    margin-left:  20px !important;
+}
+.scroll-to-section > a{
+    padding: 14px;
 }
 
-.bg_content:after {
-    content: '';
-    background-image: url(/src/images/slider-left-dec.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}

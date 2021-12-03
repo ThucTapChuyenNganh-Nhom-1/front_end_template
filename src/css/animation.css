@@ -1031,8 +1031,15 @@
 }
 
 .fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
+    -webkit-animation: fadeIn 1.3s;
+    animation: fadeIn 1.3s;
+}
+
+.fadeIn_1 {
+    -webkit-animation: fadeIn 1.3s;    
+    animation: fadeIn;
+    animation-duration: 0.75s;
+    animation-delay: 0s;
 }
 
 @-webkit-keyframes fadeInDown {
@@ -1052,7 +1059,7 @@
     0% {
         opacity: 0;
         -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -90%, 0);
     }
     100% {
         opacity: 1;
@@ -1062,9 +1069,11 @@
 }
 
 .fadeInDown {
-    -webkit-animation-name: fadeInDown;
-    animation-name: fadeInDown;
-    animation: fadeInDown 2s;
+    -webkit-animation: fadeInDown 1.5s;
+    /* animation-name: fadeInDown; */
+    animation: fadeInDown;
+    animation-duration: 0.75s;
+    animation-delay: 0s;
 }
 
 @-webkit-keyframes fadeInDownBig {
@@ -1094,8 +1103,8 @@
 }
 
 .fadeInDownBig {
-    -webkit-animation-name: fadeInDownBig;
-    animation-name: fadeInDownBig;
+    -webkit-animation: fadeInDownBig 1.5s;
+    animation: fadeInDownBig 1.5s;
 }
 
 @-webkit-keyframes fadeInLeft {
@@ -1249,8 +1258,8 @@
 }
 
 .fadeInUp {
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp;
+    -webkit-animation: fadeInUp 1s;
+    animation: fadeInUp 1s;
 }
 
 @-webkit-keyframes fadeInUpBig {
@@ -2771,7 +2780,7 @@
     animation-name: zoomOutUp;
 }
 
-@-webkit-keyframes slideInDown {
+@-webkit-keyframes animate__slideInDown {
     0% {
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
@@ -2783,7 +2792,7 @@
     }
 }
 
-@keyframes slideInDown {
+@keyframes animate__slideInDown {
     0% {
         -webkit-transform: translateY(-100%);
         transform: translateY(-120%);
@@ -2795,9 +2804,9 @@
     }
 }
 
-.slideInDown {
+.animate__slideInDown {
     /* -webkit-animation-name: slideInDown; */
-    animation: slideInDown 2s;
+    animation: animate__slideInDown 1s;
 }
 
 @-webkit-keyframes slideInLeft {
@@ -2885,6 +2894,7 @@
 .slideInUp {
     -webkit-animation-name: slideInUp;
     animation-name: slideInUp;
+    animation-duration: 1s;
 }
 
 @-webkit-keyframes slideOutDown {

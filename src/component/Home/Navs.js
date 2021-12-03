@@ -1,35 +1,68 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import logo from '../../images/logo_nhom1.png'
 
-// const tabs = ["TRANG CHỦ", "GIỚI THIỆU", "DỰ ÁN", "LIÊN HỆ"]
+const tabs = [
+    {
+        href: "#home",
+        title: "home",
+        name: "TRANG CHỦ",
+    },
+    {
+        href: "#about",
+        title: "about",
+        name: "GIỚI THIỆU",
+    },
+    {
+        href: "#project",
+        title: "project",
+        name: "DỰ ÁN",
+    },
+    {
+        href: "#contact",
+        title: "contact",
+        name: "LIÊN HỆ",
+    },
+]
 
 const Navbar = () => {
     // const [type, setType] = useState("TRANG CHỦ")
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // const [showClass, setShowClass] = useState(true)
+    const [fadeInDown, setFadeInDown] = useState("fadeInDown")
+    const [Bg_Header, setBg_Header] = useState("")
 
-    // useEffect(() => {
 
-    //     const handleResize = () => {
-    //         setShowClass(window.innerWidth <= 770)
-    //     }
-    //     window.addEventListener("resize", handleResize)
+    useEffect(() => {
 
-    //     // Clean up 
-    //     return () => {
-    //         window.removeEventListener("resize", handleResize)
-    //     }
-    // }, [])
+        const handleScroll = () => {
+            if (window.scrollY <= 120 || window.scrollY === 0 ) {
+                setFadeInDown("fadeInDown")
+                setBg_Header("")
+            } else if (window.scrollY > 120) {
+                setFadeInDown("")
+                setBg_Header("background-header")
+            }
+        }
+        window.addEventListener("scroll", handleScroll)
 
+        // Clean up 
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }, [])
+
+    // console.log(showAnimation)
+
+    
     return (
-        <div style={{ 
-            borderBottom: "1px solid rgba(42, 42, 42, 0.2)", 
-            visibility: "visible",  
-            
+
+        <div style={{
+            borderBottom: "1px solid rgba(42, 42, 42, 0.2)",
+            visibility: "visible",
+
         }}
-            className="header-area header-sticky slideInDown "
+            className={"header-area header-sticky "  + Bg_Header + " " + fadeInDown }
         >
             <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div className="main-nav flex items-center justify-between">
@@ -41,54 +74,27 @@ const Navbar = () => {
                     >
                         <img
                             src={logo}
-                            style={{  }}
+                            style={{}}
                             className="img"
                             alt=""
                         />
 
                     </a>
                     <ul className="flex items-center hidden space-x-8 lg:flex">
-                        <li className="scroll-to-section">
-                            <a
-                                href="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
-                            >
-                                TRANG CHỦ
-                            </a>
-                        </li>
-                        <li className="scroll-to-section">
-                            <a
-                                href="/"
-                                aria-label="Our product"
-                                title="Our product"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
-                            >
-                                GIỚI THIỆU
-                            </a>
-                        </li>
-                        <li className="scroll-to-section">
-                            <a
-                                href="/"
-                                aria-label="Product pricing"
-                                title="Product pricing"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
-                            >
-                                DỰ ÁN
-                            </a>
-                        </li>
-                        <li className="scroll-to-section">
-                            <a
-                                href="/"
-                                aria-label="About us"
-                                title="About us"
-                                className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
-                            >
-                                LIÊN HỆ
-                            </a>
-                        </li>
-
+                        {
+                            tabs.map((item, index) => (
+                                <li key={index} className="scroll-to-section">
+                                    <a
+                                        href={item.href}
+                                        aria-label="Our product"
+                                        title={item.title}
+                                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400"
+                                    >
+                                        {item.name}
+                                    </a>
+                                </li>
+                            ))
+                        }
                     </ul>
                     <div className="lg:hidden">
                         <button
@@ -113,7 +119,7 @@ const Navbar = () => {
                             </svg>
                         </button>
                         {isMenuOpen && (
-                            <div className="absolute top-3 left-0 w-full "  style={{ zIndex: 1 }}>
+                            <div className="absolute top-3 left-0 w-full " style={{ zIndex: 1 }}>
                                 <div className="p-5 bg-white border rounded shadow-sm">
                                     <div className="flex items-center justify-between mb-4">
                                         <div></div>
@@ -135,47 +141,22 @@ const Navbar = () => {
                                     </div>
                                     <nav>
                                         <ul className="space-y-4">
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    aria-label="Our product"
-                                                    title="Our product"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    TRANG CHỦ
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    aria-label="Our product"
-                                                    title="Our product"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    GIỚI THIỆU
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    aria-label="Product pricing"
-                                                    title="Product pricing"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    DỰ ÁN
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a
-                                                    href="/"
-                                                    aria-label="About us"
-                                                    title="About us"
-                                                    className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                                                >
-                                                    LIÊN HỆ
-                                                </a>
-                                            </li>
+                                            {
+                                                tabs.map((item, index) => (
 
+                                                    <li key={index}>
+                                                        <a
+                                                            href={item.href}
+                                                            aria-label="Our product"
+                                                            title={item.title}
+                                                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                                        >
+                                                            {item.name}
+                                                        </a>
+                                                    </li>
+                                                    
+                                                ))
+                                            }
                                         </ul>
                                     </nav>
                                 </div>

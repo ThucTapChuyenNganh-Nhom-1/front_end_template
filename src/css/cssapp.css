@@ -328,7 +328,7 @@ header
 
 .background-header {
     background-color: #fff !important;
-    height: 80px!important;
+    height: 90px!important;
     border-bottom: none !important;
     position: fixed!important;
     top: 0px;
@@ -373,7 +373,7 @@ header
     position: absolute;
     left: 0px;
     right: 0px;
-    z-index: 1;
+    z-index: 3;
     height: 100px;
     -webkit-transition: all .5s ease 0s;
     -moz-transition: all .5s ease 0s;
@@ -1038,25 +1038,25 @@ Services Style
 --------------------------------------------- 
 */
 
-.services {
+.content {
     padding-top: 130px;
     position: relative;
 }
 
-.services .section-heading p {
+.content .section-heading p {
     margin-top: 10px;
     margin-left: 18%;
     margin-right: 18%;
 }
 
-.services .container-fluid {
+.content .container-fluid {
     padding-left: 65px;
     padding-right: 65px;
 }
 
-.services:after {
+.content:after {
     content: '';
-    /* background-image: url(../images/services-left-dec.png); */
+    background-image: url(/src/images/services-left-dec.png);
     background-repeat: no-repeat;
     position: absolute;
     left: 0;
@@ -1066,9 +1066,9 @@ Services Style
     z-index: 0;
 }
 
-.services:before {
+.content:before {
     content: '';
-    /* background-image: url(../images/services-right-dec.png); */
+    background-image: url(/src/images/services-right-dec.png);
     background-repeat: no-repeat;
     position: absolute;
     right: 0;
@@ -1078,12 +1078,12 @@ Services Style
     z-index: 0;
 }
 
-.services .section-heading {
+.content .section-heading {
     text-align: center;
     margin-bottom: 80px;
 }
 
-.services .section-heading .line-dec {
+.content .section-heading .line-dec {
     margin: 0 auto;
 }
 
@@ -2077,7 +2077,7 @@ responsive
     }
     .bg_content {
         text-align: center;
-        padding: 170px 0px 30px 0px;
+        padding: 170px 0px 0px 0px;
         z-index: 0;
     }
     .bg_content:before {
@@ -2102,7 +2102,7 @@ responsive
         margin-bottom: 45px;
         ;
     }
-    .services .naccs .menu div {
+    .content .naccs .menu div {
         font-size: 15px;
         font-weight: 500;
     }
@@ -2236,26 +2236,26 @@ responsive
     .service-item .right-content {
         display: inline-block;
     }
-    .services .naccs .menu div .thumb {
+    .content .naccs .menu div .thumb {
         padding: 5px;
     }
-    .services .icon img {
+    .content .icon img {
         margin: 0px;
     }
     .the-clients .nacc .thumb .down-content .right-content {
         margin-left: 0px;
         margin-top: 15px;
     }
-    .services ul.nacc li.active {
+    .content ul.nacc li.active {
         padding: 45px;
     }
-    .services .naccs .menu div {
+    .content .naccs .menu div {
         font-size: 0px;
     }
     .the-clients .nacc .thumb .down-content {
         text-align: center;
     }
-    .services ul.nacc li .right-image img {
+    .content ul.nacc li .right-image img {
         float: none;
     }
     .our-portfolio .section-heading,

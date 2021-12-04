@@ -77,7 +77,7 @@ const Project = () => {
 
                     {
                         projects.map((item) => (
-                            <a href={ item.pjId }>
+                            <a href="/" key={item.pjId}>
                                 <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-xl">
                                     <img
                                         src={item.imgPJ}
@@ -103,7 +103,7 @@ const Project = () => {
                                         <div className="flex">
                                             {
                                                 item.author.map((aut) => (
-                                                    <a href={"/" + aut.authorId} aria-label="Author" title="Author" className="mr-5">
+                                                    <a key={aut.authorId} href={"/" + aut.authorId} aria-label="Author" title="Author" className="mr-5">
                                                         <img
                                                             src={aut.imgAut}
                                                             alt="avatar"

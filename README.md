@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+After clone code, pls run terminal: ###`npm install` to pull node_module (this messenger for newbie)
+
 ## Available Scripts
 
 In the project directory, you can run:

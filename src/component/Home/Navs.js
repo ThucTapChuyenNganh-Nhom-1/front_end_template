@@ -31,6 +31,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [fadeInDown, setFadeInDown] = useState("fadeInDown")
     const [Bg_Header, setBg_Header] = useState("")
+    // const [addWidth, setAddWidth] = useState(window.innerWidth)
 
 
     useEffect(() => {
@@ -44,13 +45,16 @@ const Navbar = () => {
                 setBg_Header("background-header")
             }
         }
+
         window.addEventListener("scroll", handleScroll)
+
 
         // Clean up 
         return () => {
             window.removeEventListener("scroll", handleScroll)
         }
     }, [])
+    
 
     // console.log(showAnimation)
 
@@ -60,12 +64,11 @@ const Navbar = () => {
         <div style={{
             borderBottom: "1px solid rgba(42, 42, 42, 0.2)",
             visibility: "visible",
-
         }}
             className={"header-area header-sticky "  + Bg_Header + " " + fadeInDown }
         >
             <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-                <div className="main-nav flex items-center justify-between">
+                <div className="main-nav flex items-center justify-between mx-auto main-nav_md" >
                     <a
                         href="/"
                         aria-label="Company"

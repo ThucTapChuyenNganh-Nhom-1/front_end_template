@@ -2,7 +2,7 @@ import React from 'react'
 import dash from '../../images/heading-line-dec.png'
 import avt_bao from '../../images/avt_bao.jpg'
 import avt_au from '../../images/client-image.jpg'
-import { useState } from 'react'
+// import { useState } from 'react'
 
 const projects = [
     {
@@ -54,7 +54,7 @@ const projects = [
 
 const Project = () => {
 
-    const [show, setShow] = useState(false)
+    // const [show, setShow] = useState(false)
 
     // return (
     //   <div style={{padding: 20}}>
@@ -67,55 +67,58 @@ const Project = () => {
 
     return (
         <div>
-            <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 fadeInDown">
+            <div className="px-6 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:py-20 fadeInDown">
                 <h2 className="mb-4 font-sans text-3xl text-center font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
                     Các Dự Án Đã Thực Hiện
                 </h2>
                 <img src={dash} alt="" className="w-14 text-center mx-auto mb-6" />
                 <hr className="w-7/12 mx-auto my-8 border-gray-300" />
-                <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
+                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
                     {
                         projects.map((item) => (
-                            <a href="/" key={item.pjId}>
-                                <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-xl">
+
+                            <div key={item.pjId} className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-xl">
+                                <a href="/" >
                                     <img
                                         src={item.imgPJ}
                                         className="object-cover w-full h-64"
                                         alt=""
                                     />
-                                    <div className="p-5 border border-t-0">
-                                        <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-                                            <span className="text-gray-600">{item.startDay}</span>
-                                            <span className="text-gray-600"> — {item.endDay}</span>
-                                        </p>
-                                        <a
-                                            href="/"
-                                            aria-label="Category"
-                                            title="Visit the East"
-                                            className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                                        >
-                                            {item.namePJ}
-                                        </a>
-                                        <p className="mb-2 text-gray-700 h-32">
-                                            {item.desc}
-                                        </p>
-                                        <div className="flex">
-                                            {
-                                                item.author.map((aut) => (
-                                                    <a key={aut.authorId} href={"/" + aut.authorId} aria-label="Author" title="Author" className="mr-5">
-                                                        <img
-                                                            src={aut.imgAut}
-                                                            alt="avatar"
-                                                            className="object-cover w-10 h-10 rounded-full shadow-sm"
-                                                        />
-                                                    </a>
-                                                ))
-                                            }
-                                        </div>
+                                </a>
+
+                                <div className="p-5 border border-t-0">
+                                    <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
+                                        <span className="text-gray-600">{item.startDay}</span>
+                                        <span className="text-gray-600"> — {item.endDay}</span>
+                                    </p>
+                                    <a
+                                        href="/"
+                                        aria-label="Category"
+                                        title="Visit the East"
+                                        className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                                    >
+                                        {item.namePJ}
+                                    </a>
+                                    <p className="mb-2 text-gray-700 h-32">
+                                        {item.desc}
+                                    </p>
+                                    <div className="flex">
+                                        {
+                                            item.author.map((aut) => (
+                                                <a key={aut.authorId} href={"/" + aut.authorId} aria-label="Author" title="Author" className="mr-5">
+                                                    <img
+                                                        src={aut.imgAut}
+                                                        alt="avatar"
+                                                        className="object-cover w-10 h-10 rounded-full shadow-sm"
+                                                    />
+                                                </a>
+                                            ))
+                                        }
                                     </div>
                                 </div>
-                            </a>
+                            </div>
+
                         ))
                     }
                 </div>

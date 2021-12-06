@@ -35,7 +35,7 @@ const Header = () => {
         <div>
             <div {...bind_home} className="bg_content mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl md:px-24 ">
                 <div className="grid gap-10 lg:grid-cols-2 show-up ">
-                    <div className={"sm:pr-10 slideInLeft "} style={{ alignSelf: "center" }}>
+                    <div className={"pr-0 lg:p-10 slideInLeft "} style={{ alignSelf: "center" }}>
                         <a
                             href="/"
                             aria-label="Go Home"
@@ -72,7 +72,7 @@ const Header = () => {
                             giờ để được đặt hàng tạo trang web của riêng bạn.
                         </p>
                         <hr className="mb-5 border-gray-300" />
-                        <div className="flex items-center ls_icon space-x-6">
+                        <div className="flex items-center justify-center lg:justify-start ls_icon space-x-6">
                             <a
                                 href="/"
                                 className="text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"

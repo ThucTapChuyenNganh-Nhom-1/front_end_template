@@ -8,48 +8,40 @@ const Project = () => {
           Dự án
         </h2>
       </div>
-      <div className="grid gap-1 lg:grid-cols-3 md:grid-cols-2 sm:mx-auto lg:max-w-full">
-        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
-          <img
-            src="https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
-            className="object-cover w-full h-64"
-            alt=""
-          />
-          <div className="p-2 border border-t-0">
-            <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
-              <span
-                href="/"
-                className=" text-blue-gray-900"
-                aria-label="Category"
-                title="traveling"
-              >
+      <div className="grid gap-3 lg:grid-cols-3 md:grid-cols-2 sm:mx-auto lg:max-w-full ">
+        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-lg">
+          <a href="/">
+            <img
+              src="https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+              className="object-cover w-full h-64"
+              alt=""
+            />
+          </a>
+
+          <div className="p-2 border border-t-0 ">
+            <p className="mb-3 text-base font-semibold tracking-wide uppercase">
+              <span className="text-blue-gray-900">
                 Ngày bắt đầu
               </span>
               <span className="text-gray-600"> — 02/2021</span>
             </p>
-            <a
-              href="/"
-              aria-label="Category"
-              title="Visit the East"
-              className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
-            >
+            <span className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700">
               Tên dự án
-            </a>
-            <p className="mb-2 text-gray-700">
+            </span>
+            <p className="mb-2 text-gray-700 text-xl text-justify">
               Xây dựng dự án phần mềm sử dụng công nghệ ASP.NET với mô hình MVC kết
               hợp cơ sở dữ liệu SQL Server nhằm tạo ra ứng dụng web bán sách.
             </p>
-
           </div>
         </div>
-        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-lg">
           <img
             src="https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
             className="object-cover w-full h-64"
             alt=""
           />
           <div className="p-2 border border-t-0">
-            <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
+            <p className="mb-3 text-sm font-semibold tracking-wide uppercase">
               <a
                 href="/"
                 className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
@@ -74,14 +66,14 @@ const Project = () => {
             </p>
           </div>
         </div>
-        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-sm">
+        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-lg">
           <img
             src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
             className="object-cover w-full h-64"
             alt=""
           />
           <div className="p-2 border border-t-0">
-            <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
+            <p className="mb-3 text-sm font-semibold tracking-wide uppercase">
               <a
                 href="/"
                 className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"

@@ -7,7 +7,7 @@ import './css/animation.css'
 import Footer from './component/Home/Footer';
 import Content from './component/Home/Content';
 import { SmothScroll } from './component/Home/SmothScroll';
-// import Menu from './component/Info/Menu';
+import Menu from './component/Info/Menu';
 // import './css/animation.css'
 
 
@@ -17,13 +17,16 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+
+      {/* trang home */}
+      {/* <Navbar />
       <Header />
       <div {...bind_about}></div>
-      <Content/>
-      <Footer />
+      <Content />
+      <Footer /> */}
 
-      {/* <Menu/> */}
+      {/* trang cá nhân */}
+      <Menu />
     </div>
   );
 }

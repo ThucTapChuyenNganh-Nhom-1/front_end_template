@@ -25,7 +25,7 @@ const Info = () => {
         </p>
       </div>
       
-      <div class="grid gap-3 lg:grid-cols-2 max-w-screen-lg sm:mx-auto lg:max-w-full ">
+      <div className="grid gap-3 lg:grid-cols-2 max-w-screen-lg sm:mx-auto lg:max-w-full ">
       {/* <div className="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto"> */}
         <div>
           <img

@@ -1,105 +1,107 @@
 import React from 'react'
+// import dash from '../../images/heading-line-dec.png'
+import avt_bao from '../../images/avt_bao.jpg'
+import avt_au from '../../images/client-image.jpg'
+import { SmothScroll } from '../Home/SmothScroll'
+// import { useState } from 'react'
+
+const projects = [
+  {
+    pjId: 1,
+    imgPJ: "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+    namePJ: "Quản lý bán sách Phương Nam",
+    startDay: "1/1/2021",
+    endDay: "31/12/2021",
+    desc: "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque",
+    author: [
+      { authorId: "NV01", imgAut: avt_bao },
+      { authorId: "NV02", imgAut: avt_au },
+    ]
+  },
+  {
+    pjId: 2,
+    imgPJ: "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+    namePJ: "Quản lý bán sách Phương Nam",
+    startDay: "1/1/2021",
+    endDay: "31/12/2021",
+    desc: "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque",
+    author: [
+      { authorId: "NV01", imgAut: avt_bao }
+    ]
+  },
+  {
+    pjId: 3,
+    imgPJ: "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+    namePJ: "Quản lý bán sách Phương Nam",
+    startDay: "1/1/2021",
+    endDay: "31/12/2021",
+    desc: "Sed ut perspiciatis unde omnis iste natus error sit sed quia consequuntur magni voluptatem doloremque",
+    author: [
+      { authorId: "NV01", imgAut: avt_bao }
+    ]
+  },
+]
 
 const Project = () => {
-  return (
-    <div id="pro" className="frame_all">
-      <div className="pb-4 text-center">
-        <h2 className="menu_name">
-          Dự án
-        </h2>
-      </div>
-      <div className="grid gap-3 lg:grid-cols-3 md:grid-cols-2 sm:mx-auto lg:max-w-full ">
-        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-lg">
-          <a href="/">
-            <img
-              src="https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
-              className="object-cover w-full h-64"
-              alt=""
-            />
-          </a>
+  const bind = SmothScroll('#pro')
 
-          <div className="p-2 border border-t-0 ">
-            <p className="mb-3 text-base font-semibold tracking-wide uppercase">
-              <span className="text-blue-gray-900">
-                Ngày bắt đầu
-              </span>
-              <span className="text-gray-600"> — 02/2021</span>
-            </p>
-            <span className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700">
-              Tên dự án
-            </span>
-            <p className="mb-2 text-gray-700 text-xl text-justify">
-              Xây dựng dự án phần mềm sử dụng công nghệ ASP.NET với mô hình MVC kết
-              hợp cơ sở dữ liệu SQL Server nhằm tạo ra ứng dụng web bán sách.
-            </p>
-          </div>
+  return (
+      <div {...bind} className="frame_all fadeInDown">
+        <div className="title">
+          <h2 className="menu_name">
+            Các Dự Án Đã Thực Hiện
+          </h2>
         </div>
-        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-lg">
-          <img
-            src="https://images.pexels.com/photos/447592/pexels-photo-447592.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-            className="object-cover w-full h-64"
-            alt=""
-          />
-          <div className="p-2 border border-t-0">
-            <p className="mb-3 text-sm font-semibold tracking-wide uppercase">
-              <a
-                href="/"
-                className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
-                aria-label="Category"
-                title="traveling"
-              >
-                traveling
-              </a>
-              <span className="text-gray-600">— 28 Dec 2020</span>
-            </p>
-            <a
-              href="/"
-              aria-label="Category"
-              title="Simple is better"
-              className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
-            >
-              Simple is better
-            </a>
-            <p className="mb-2 text-gray-700">
-              Sed ut perspiciatis unde omnis iste natus error sit sed quia
-              consequuntur magni voluptatem doloremque.
-            </p>
-          </div>
-        </div>
-        <div className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-lg">
-          <img
-            src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-            className="object-cover w-full h-64"
-            alt=""
-          />
-          <div className="p-2 border border-t-0">
-            <p className="mb-3 text-sm font-semibold tracking-wide uppercase">
-              <a
-                href="/"
-                className="transition-colors duration-200 text-blue-gray-900 hover:text-deep-purple-accent-700"
-                aria-label="Category"
-                title="traveling"
-              >
-                traveling
-              </a>
-              <span className="text-gray-600">— 28 Dec 2020</span>
-            </p>
-            <a
-              href="/"
-              aria-label="Category"
-              title="Film It!"
-              className="inline-block mb-3 text-2xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
-            >
-              Film It!
-            </a>
-            <p className="mb-2 text-gray-700">
-              Sed ut perspiciatis unde omnis iste natus error sit sed quia
-              consequuntur magni voluptatem doloremque.
-            </p>
-          </div>
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+          {
+            projects.map((item) => (
+
+              <div key={item.pjId} className="overflow-hidden transition-shadow duration-300 bg-white rounded shadow-xl">
+                <a href="/" >
+                  <img
+                    src={item.imgPJ}
+                    className="object-cover w-full h-64"
+                    alt=""
+                  />
+                </a>
+
+                <div className="p-5 border border-t-0">
+                  <p className="mb-3 text-base font-semibold tracking-wide uppercase">
+                    <span className="text-gray-600">{item.startDay}</span>
+                    <span className="text-gray-600"> — {item.endDay}</span>
+                  </p>
+                  <a
+                    href="/"
+                    aria-label="Category"
+                    title="Visit the East"
+                    className="inline-block mb-3 text-xl font-bold leading-5 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                  >
+                    {item.namePJ}
+                  </a>
+                  <p className="mb-2 text-gray-700 h-32">
+                    {item.desc}
+                  </p>
+                  <div className="flex">
+                    {
+                      item.author.map((aut) => (
+                        <a key={aut.authorId} href={"/" + aut.authorId} aria-label="Author" title="Author" className="mr-5">
+                          <img
+                            src={aut.imgAut}
+                            alt="avatar"
+                            className="object-cover w-10 h-10 rounded-full shadow-sm"
+                          />
+                        </a>
+                      ))
+                    }
+                  </div>
+                </div>
+              </div>
+
+            ))
+          }
         </div>
       </div>
-    </div>
   )
 }
 

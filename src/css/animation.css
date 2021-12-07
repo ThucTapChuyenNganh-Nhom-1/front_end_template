@@ -1134,8 +1134,8 @@
 }
 
 .fadeInLeft {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
+    -webkit-animation: fadeInLeft 1s;
+    animation: fadeInLeft 1s;
 }
 
 @-webkit-keyframes fadeInLeftBig {

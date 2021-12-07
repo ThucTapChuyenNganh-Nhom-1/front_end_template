@@ -1,443 +1,65 @@
 import React from 'react'
+import { SmothScroll } from '../Home/SmothScroll'
 
-const abilities = [
-  // kỹ năng, ngôn ngữ, công cụ
-  // {
-  //   autID: "NV01",
-  //   kyNang: ['PHP', 'Laravel Framework', 'Bootstrap Framework', 'PHP', 'Laravel Framework', 'Bootstrap Framework'],
-  //   ngonNgu: ['PHP1', 'Laravel Framework1', 'Bootstrap Framework1'],
-  //   congCu: ['PHP2', 'Laravel Framework2', 'Bootstrap Framework2'],
-  // },
-  // {
-  //   autID: "NV02",
-  //   kyNang: ['PHP3', 'Laravel Framework', 'Bootstrap Framework'],
-  //   ngonNgu: ['PHP4', 'Laravel Framework', 'Bootstrap Framework'],
-  //   congCu: ['PHP5', 'Laravel Framework', 'Bootstrap Framework'],
-  // },
-  // {
-  //   autID: "NV03",
-  //   kyNang: ['PHP6', 'Laravel Framework', 'Bootstrap Framework'],
-  //   ngonNgu: ['PHP7', 'Laravel Framework', 'Bootstrap Framework'],
-  //   congCu: ['PHP8', 'Laravel Framework', 'Bootstrap Framework'],
-  // }
-]
+const abilities =
+  [
+    {
+      nameAbl:"Kỹ năng",
+      nangluc: ['PHP', 'Laravel Framework','Bootstrap Framework', 'PHP', 'Laravel Framework', 'Bootstrap Framework'],
+    },
+    {
+      nameAbl:"Ngôn ngữ",
+      nangluc: ['Tiếng việt', 'Anh', 'Trung'],
+    },
+    {
+      nameAbl:"Công cụ",
+      nangluc: ['PHP2', 'Laravel Framework2', 'Bootstrap Framework2'],
+    }
+  ]
 
 const Abilities = () => {
+  const bind = SmothScroll('#abli')
+
   return (
-    <div id="abli" className="frame_all">
+    <div {...bind} className="frame_all fadeInUp">
       <div className="title">
         <h2 className="menu_name">
           Năng lực
         </h2>
       </div>
-      <div className="grid max-w-md gap-5 row-gap-10 sm:mx-auto lg:max-w-full lg:grid-cols-3 text-lg">
+
+      <div className="grid max-w-md gap-5 row-gap-10 sm:mx-auto lg:max-w-full lg:grid-cols-3 text-base">
         {
           abilities.map((item) => (
-            <div>
-              {/* bắt đầu kỹ năng */}
-              <div>
-                <h6 className="mb-2 font-semibold leading-5">Kỹ năng</h6>
-                <ul className="grid lg:grid-cols-2 md:grid-cols-3 grid-cols-2 gap-1">
-                  {
-                    item.kyNang.map((tenkn) => (
-                      <li className="flex items-start">
-                        <span className="mr-1">
-                          <svg
-                            className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                            stroke="currentColor"
-                            viewBox="0 0 52 52"
-                          >
-                            <polygon
-                              strokeWidth="4"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              fill="none"
-                              points="29 13 14 29 25 29 23 39 38 23 27 23"
-                            />
-                          </svg>
-                        </span>
-                        {tenkn}
-                      </li>
-                    ))
-                  }
-                </ul>
-              </div>
-              {/* kết thúc kỹ năng */}
-
-              {/* bắt đầu Ngôn ngữ */}
-              <div>
-                <h6 className="mb-2 font-semibold leading-5">Ngôn ngữ</h6>
-                <ul className="grid lg:grid-cols-2 md:grid-cols-3 grid-cols-2 gap-1">
+            <div key={item.nameAbl}>
+              <h6 className="mb-2 font-semibold leading-5">{item.nameAbl}</h6>
+              <ul className="grid lg:grid-cols-2 md:grid-cols-3 grid-cols-2 gap-1">
                 {
-                    item.ngonNgu.map((tennn) => (
-                      <li className="flex items-start">
-                        <span className="mr-1">
-                          <svg
-                            className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                            stroke="currentColor"
-                            viewBox="0 0 52 52"
-                          >
-                            <polygon
-                              strokeWidth="4"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              fill="none"
-                              points="29 13 14 29 25 29 23 39 38 23 27 23"
-                            />
-                          </svg>
-                        </span>
-                        {tennn}
-                      </li>
-                    ))
-                  }
-                  </ul>
-              </div>
-              {/* kết thúc Ngôn ngữ */}
-
-              {/* bắt đầu Công cụ */}
-              <div>
-                <h6 className="mb-2 font-semibold leading-5">Công cụ</h6>
-                <ul className="grid lg:grid-cols-2 md:grid-cols-3 grid-cols-2 gap-1">
-                {
-                    item.congCu.map((tencc) => (
-                      <li className="flex items-start">
-                        <span className="mr-1">
-                          <svg
-                            className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                            stroke="currentColor"
-                            viewBox="0 0 52 52"
-                          >
-                            <polygon
-                              strokeWidth="4"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              fill="none"
-                              points="29 13 14 29 25 29 23 39 38 23 27 23"
-                            />
-                          </svg>
-                        </span>
-                        {tencc}
-                      </li>
-                    ))
-                  }
-                </ul>
-              </div>
-              {/* kết thúc Công cụ */}
+                  item.nangluc.map((name, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="mr-1">
+                        <svg
+                          className="w-5 h-5 mt-px text-deep-purple-accent-400"
+                          stroke="currentColor"
+                          viewBox="0 0 52 52"
+                        >
+                          <polygon
+                            strokeWidth="4"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            fill="none"
+                            points="29 13 14 29 25 29 23 39 38 23 27 23"
+                          />
+                        </svg>
+                      </span>
+                      {name}
+                    </li>
+                  ))
+                }
+              </ul>
             </div>
           ))
         }
-
-        {/* bắt đầu kỹ năng */}
-        <div>
-          <h6 className="mb-2 font-semibold leading-5">Kỹ năng</h6>
-          <ul className="grid lg:grid-cols-2 md:grid-cols-3 grid-cols-2 gap-1">
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-          </ul>
-        </div>
-        {/* kết thúc kỹ năng */}
-
-        {/* bắt đầu Ngôn ngữ */}
-        <div>
-          <h6 className="mb-2 font-semibold leading-5">Ngôn ngữ</h6>
-          <ul className="grid lg:grid-cols-2 md:grid-cols-3 grid-cols-2 gap-1">
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-          </ul>
-        </div>
-        {/* kết thúc Ngôn ngữ */}
-
-        {/* bắt đầu Công cụ */}
-        <div>
-          <h6 className="mb-2 font-semibold leading-5">Công cụ</h6>
-          <ul className="grid lg:grid-cols-2 md:grid-cols-3 grid-cols-2 gap-1">
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-            <li className="flex items-start">
-              <span className="mr-1">
-                <svg
-                  className="w-5 h-5 mt-px text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </span>Computers</li>
-          </ul>
-        </div>
-        {/* kết thúc Công cụ */}
       </div>
     </div>
   )
